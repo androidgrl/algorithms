@@ -1,4 +1,4 @@
-Analysis if Selection Sort
+Analysis of Selection Sort
 
 For an array of length n, it calls indexOfMinimum n times, and swap n times.
 
