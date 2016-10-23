@@ -1,5 +1,6 @@
 // Takes in an array that has two sorted subarrays,
 //  from [p..q] and [q+1..r], and merges the array
+
 var merge = function(array, p, q, r) {
     var lowHalf = [];
     var highHalf = [];
@@ -40,8 +41,15 @@ var merge = function(array, p, q, r) {
     }
 };
 
-var array = [3, 7, 12, 14, 2, 6, 9, 11];
-merge(array, 0,
-    Math.floor((0 + array.length-1) / 2),
-    array.length-1);
-println("Array after merging: " + array);Program.assertEqual(array, [2, 3, 6, 7, 9, 11, 12, 14]);
+var mergeSort = function(array, p, r) {
+    if (r > p) {
+        var q = Math.floor((p + r)/2);
+        mergeSort(array, p, q);
+        mergeSort(array, q + 1, r);
+        merge(array, p, q, r);
+    }
+};
+
+var array = [14, 7, -3, 12, 9, 11, 6, 2];
+mergeSort(array, 0, array.length-1);
+console.log(array);
