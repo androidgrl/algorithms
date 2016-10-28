@@ -1,21 +1,6 @@
 def merge(array, p, q, r)
-  low_half = []
-  high_half = []
-  i = 0
-  j = 0
-  k = p
-
-  while k <= q do
-    low_half[i] = array[k]
-    i += 1
-    k += 1
-  end
-
-  while k <= r do
-    high_half[j] = array[k]
-    j += 1
-    k += 1
-  end
+  low_half = array[p..q]
+  high_half = array[(q + 1)..r]
 
   i = 0
   j = 0
