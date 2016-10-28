@@ -2,9 +2,7 @@ var doSearch = function(array, targetValue) {
     var min = 0;
     var max = array.length - 1;
     var guess;
-    var count = 0;
     while (min <= max) {
-    count++;
       guess = Math.floor((max + min) / 2);
       if (array[guess] === targetValue) {
           console.log("It took" + count + "times");
