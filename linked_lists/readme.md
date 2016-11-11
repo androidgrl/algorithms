@@ -1,0 +1,4 @@
+append
+count
+pop
+tail
