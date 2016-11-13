@@ -1,17 +1,19 @@
-def search(array, target)
+def search(array, value)
   min = 0
   max = array.length - 1
-  while min <= max
-    guess = ((min + max)/2).floor
-    if array[guess] == target
-      return guess
-    elsif array[guess] < target
-      min = guess + 1
+  while min <= max do
+    middle = ((min + max)/2).floor
+    if value == array[middle]
+      return middle
+    elsif value < array[middle]
+      max = array[middle] - 1
     else
-      max = guess - 1
+      min = array[middle] + 1
     end
   end
   return -1
 end
 
-puts search([1,2,3,4], 4)
+array = [1,2,3,4,5]
+value = 1
+puts search(array, value)
