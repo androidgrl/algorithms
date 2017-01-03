@@ -1,11 +1,11 @@
 def palindrome?(string)
   if string.length <= 1
-    return true
+    true
   elsif string[0] == string[-1]
-    return palindrome?(string[1..-2])
+    palindrome?(string[1..-2])
   else
-    return false
+    false
   end
 end
 
-puts palindrome?("ab")
+puts palindrome?("abba")

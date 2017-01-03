@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'recursive_linked'
+require_relative 'recursive_linked_2'
 
 class NodeTest < Minitest::Test
   attr_reader :node
@@ -34,6 +34,7 @@ class NodeTest < Minitest::Test
   end
 
   def test_it_pops_the_last_node_data
+    skip
     node.append(2).append(3)
     assert_equal 3, node.count
     assert_equal 3, node.pop
