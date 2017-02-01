@@ -1,4 +1,5 @@
-require_relative 'binary_tree'
+require 'pry'
+require_relative 'binary'
 require 'minitest/autorun'
 require 'minitest/pride'
 
@@ -42,7 +43,13 @@ class NodeTest < Minitest::Test
   end
 
   def test_it_finds_a_value_down_the_tree
-    node.insert(5).insert(2).insert(1)
+    node = Node.new(10)
+    node.insert(5)
+    node.insert(11)
+    node.insert(3)
+    node.insert(1)
     assert node.include?(1)
+    refute node.include?(0)
+    assert node.include?(11)
   end
 end

@@ -1,0 +1,35 @@
+Graph Terms:
+
+1. Vertices (names)
+2. Edge (line connecting two vertices), denoted by a pair(a,b)
+3. Undirected when both a and b know each other, when (a,b) == (b,a)
+4. Directed when the relationship doesn't go both ways
+5. Degree, the number of edges connecting a vertex
+6. Shortest path
+7. Cycle, when a path goes from another vertex back to itself
+8. Weight, the number we put on an edge
+9. Weighted graph, graph whose edges have weights
+10. Directed acyclic graph, no cycles, one way, like a flowchart
+11. out-degree, in-degree, the number of edges going out or in of a vertex
+12. V the total number of vertices, E the total number of edges
+13. Edge list, a list of edges represented by vertex pairs [[a,b], [b,c]]
+14. If we want to find whether a graph contains a particular edge of vertex pair, we have to search
+    potentially through all of them, making a linear asymptotic search
+15. Adgancency matrix, all the vertices are each on an x and y axis and an edge is represented by a 1 in the matrix
+16. Adgancency matrices have a constant lookup time, all you need to do is get the edge on the x and y axis positions.
+17. Disadvantages to adjancency matrices are that they take up v^2 space, because say you have lots of vertices
+    but only two are connected, you still need to fill the square with zeros.  And if you want to find ALL the adjacent
+    veretices to a vertex, you have to look at the whole row or colunm it's on.
+18. Adjacency lists, combine the edge list with the adjacency matrix- for each vertex, we store all it's adjacent vertices.
+    [[1,2,3],[7,4,2]] == node 0 is adjacent to 1,2,3 and node 1 to 7,4,2
+    We can access the adjacent vertices in constant time because all we need to do is just access the array index.
+
+__Storage Space__
+Directed Adjacency list: V + E
+Directed Adjacency matrix: V^2
+Directed Edge List: E
+
+__Search Time__
+Directed Adjacency list: D
+Directed Adjacency matrix: 1
+Directed Edge List: E
