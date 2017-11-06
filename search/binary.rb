@@ -11,7 +11,7 @@ def search(array, value)
       min = array[middle] + 1
     end
   end
-  return -1
+  -1
 end
 
 array = [1,2,3,4,5]

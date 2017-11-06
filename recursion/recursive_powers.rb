@@ -4,7 +4,7 @@ def powers(x, n)
   elsif n % 2 == 0
     return powers(x, n/2) * powers(x, n/2)
   elsif n < 0
-    return 1/powers(x, n)
+    return 1.0/powers(x, n)
   else
     return x * powers(x, n-1)
   end
